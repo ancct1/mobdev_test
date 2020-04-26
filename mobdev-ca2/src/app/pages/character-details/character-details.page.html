@@ -1,0 +1,38 @@
+<ion-header>
+<!-- changing color of the bar to medium - gray-->
+	<ion-toolbar color="medium">
+		<ion-buttons slot="start">
+        <!-- Back button function-->
+			<ion-back-button defaulthref="/tabs/characters"></ion-back-button>
+		</ion-buttons>
+		<ion-title>Characters Details</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card *ngIf="character">
+		<ion-card-content>
+			<h4>Name: {{ character.name }} </h4>
+		</ion-card-content>
+	</ion-card>
+
+    <ion-card *ngIf="character">
+		<ion-card-content>
+			<h4>Nickname: {{ character.nickname }} </h4>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card *ngIf="character">
+		<ion-card-content>
+			<h4>Occupation: {{ character.occupation }} </h4>
+		</ion-card-content>
+	</ion-card>
+
+    <ion-card *ngIf="character">
+		<ion-card-content>
+			<h4>Status: {{ character.status }} </h4>
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>
