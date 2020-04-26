@@ -1,5 +1,6 @@
 <ion-header>
-	<ion-toolbar color="medium">
+	<!-- changing color of the bar to secondary - blue-->
+	<ion-toolbar color="secondary">
 		<ion-title>Deaths</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -8,7 +9,7 @@
 
 	<ion-card>
 		<ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
-		  {{ death.death }}
+			{{ death.death }}
 		</ion-item>
 	</ion-card>
 

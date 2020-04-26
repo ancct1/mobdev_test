@@ -1,12 +1,12 @@
 <ion-header>
-<!-- changing color of the bar to medium - gray-->
-  <ion-toolbar color="medium">
-    <ion-buttons slot="start">
-      <ion-back-button defaulthref="/tabs/quotes"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Quote Details</ion-title>
-    
-  </ion-toolbar>
+	<!-- changing color of the bar to secondary - blue-->
+	<ion-toolbar color="secondary">
+		<ion-buttons slot="start">
+			<ion-back-button defaulthref="/tabs/quotes"></ion-back-button>
+		</ion-buttons>
+		<ion-title>Quote Details</ion-title>
+
+	</ion-toolbar>
 </ion-header>
 
 <ion-content padding>
@@ -17,11 +17,11 @@
 		</ion-card-content>
 	</ion-card>
 
-    <ion-card *ngIf="quote">
+	<ion-card *ngIf="quote">
 		<ion-card-content>
 			<h4> Serie: {{ quote.series}} </h4>
 		</ion-card-content>
 	</ion-card>
 
-  
+
 </ion-content>

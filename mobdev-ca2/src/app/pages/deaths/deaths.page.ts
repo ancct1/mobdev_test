@@ -19,10 +19,10 @@ export class DeathsPage implements OnInit {
         this.deaths = this.api.getDeaths();
         this.deaths.subscribe(data => {
             console.log('my data', data);
-            });
+        });
     }
     openDetails(deaths) {
-        let deathId = deaths.deathId;        
+        let deathId = deaths.deathId;
         this.router.navigateByUrl(`/tabs/deaths/${deathId}`);
     }
 }

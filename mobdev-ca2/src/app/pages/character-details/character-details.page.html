@@ -1,11 +1,21 @@
 <ion-header>
-<!-- changing color of the bar to medium - gray-->
-	<ion-toolbar color="medium">
+	<!-- changing color of the bar to secondary - blue-->
+	<ion-toolbar color="secondary">
 		<ion-buttons slot="start">
-        <!-- Back button function-->
+			<!-- Back button -->
 			<ion-back-button defaulthref="/tabs/characters"></ion-back-button>
 		</ion-buttons>
 		<ion-title>Characters Details</ion-title>
+		<ion-buttons slot="end">
+			<!--button for unfavourite-->
+			<ion-button (click)="unfavouriteCharacter()" *ngIf="isFavourite">
+				<ion-icon name="star" slot="icon-only" color="medium"></ion-icon>
+			</ion-button>
+			<!--button for favourite-->
+			<ion-button (click)="favouriteCharacter()" *ngIf="!isFavourite">
+				<ion-icon name="star-outline" slot="icon-only" color="medium"></ion-icon>
+			</ion-button>
+		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
 
@@ -13,25 +23,25 @@
 
 	<ion-card *ngIf="character">
 		<ion-card-content>
-			<h4>Name: {{ character.name }} </h4>
-		</ion-card-content>
-	</ion-card>
-
-    <ion-card *ngIf="character">
-		<ion-card-content>
-			<h4>Nickname: {{ character.nickname }} </h4>
+			<h3>Name: {{ character.name }} </h3>
 		</ion-card-content>
 	</ion-card>
 
 	<ion-card *ngIf="character">
 		<ion-card-content>
-			<h4>Occupation: {{ character.occupation }} </h4>
+			<h3>Nickname: {{ character.nickname }} </h3>
 		</ion-card-content>
 	</ion-card>
 
-    <ion-card *ngIf="character">
+	<ion-card *ngIf="character">
 		<ion-card-content>
-			<h4>Status: {{ character.status }} </h4>
+			<h3>Occupation: {{ character.occupation }} </h3>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card *ngIf="character">
+		<ion-card-content>
+			<h3>Status: {{ character.status }} </h3>
 		</ion-card-content>
 	</ion-card>
 

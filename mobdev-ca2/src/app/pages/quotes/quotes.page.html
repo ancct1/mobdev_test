@@ -1,20 +1,18 @@
 <ion-header>
-<!-- changing color of the bar to medium - gray-->
-	<ion-toolbar color="medium">
+	<!-- changing color of the bar to secondary - blue-->
+	<ion-toolbar color="secondary">
 		<ion-title>Quotes</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-     
 
-  <ion-list>
-  <!--function to bring a quote attribute from the url-->
-    <ion-item button detail lines="inset" 
-    *ngFor="let quote of quotes | async" 
-    (click)="openDetails(quote)">
-      <h5>Quote {{quote.quote_id}}: {{ quote.quote}}</h5>
-      
-    </ion-item>
-  </ion-list>
+
+	<ion-list>
+
+		<ion-item button detail lines="inset" *ngFor="let quote of quotes | async" (click)="openDetails(quote)">
+			<h5>Quote {{quote.quote_id}}: {{ quote.quote}}</h5>
+
+		</ion-item>
+	</ion-list>
 </ion-content>

@@ -1,20 +1,19 @@
 <ion-header>
-<!-- changing color of the bar to medium - gray-->
-  <ion-toolbar color="medium">
-    <ion-title>Characters</ion-title>
-  </ion-toolbar>
+	<!-- changing color of the bar to secondary - blue-->
+	<ion-toolbar color="secondary">
+		<ion-title>Characters</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
 
-  <ion-list>
-  <!--function to bring character attributes from the url-->
-    <ion-item button detail lines="inset" 
-    *ngFor="let character of characters | async" 
-    (click)="openDetails(character)">
-      {{ character.name }}
-    </ion-item>
 
-  </ion-list>
+	<ion-list>
+
+		<ion-item button detail lines="inset" *ngFor="let character of characters | async"
+			(click)="openDetails(character)">
+			{{ character.name }}
+		</ion-item>
+
+	</ion-list>
 </ion-content>
